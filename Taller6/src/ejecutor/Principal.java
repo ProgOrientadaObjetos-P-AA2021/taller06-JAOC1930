@@ -40,7 +40,7 @@ public class Principal {
         medico = new Medico[nM];
         for (i = 0; i < nM; i++) {
             entrada.nextLine();
-            System.out.printf("Datos del %d doctor\n", i + 1);
+            System.out.printf("Datos del %d Medico\n", i + 1);
             System.out.println("Nombre");
             nombreD = entrada.nextLine();
             System.out.println("Especialidad");
@@ -50,7 +50,7 @@ public class Principal {
             Medico medic = new Medico(nombreD, especialidad, sueldoD);
             medico[i] = medic;
         }
-        System.out.println("Ingrese el numero de enfermeros");
+        System.out.println("Ingrese el número de enfermeros");
         int nE = entrada.nextInt();
         String nombreE;
         String tipo;
