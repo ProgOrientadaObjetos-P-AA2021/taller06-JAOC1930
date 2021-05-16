@@ -31,7 +31,7 @@ public class Principal {
         System.out.println("Ingrese el numero de especialistas");
         int especialistas = entrada.nextInt();
         int i;
-        System.out.println("Ingrese el numero de doctes que hay");
+        System.out.println("Ingrese el numero de medicos");
         int nM = entrada.nextInt();
         String nombreD;
         String especialidad;
@@ -40,7 +40,7 @@ public class Principal {
         medico = new Medico[nM];
         for (i = 0; i < nM; i++) {
             entrada.nextLine();
-            System.out.printf("Datos del %d Medico\n", i + 1);
+            System.out.printf("Datos del %d medico\n", i + 1);
             System.out.println("Nombre");
             nombreD = entrada.nextLine();
             System.out.println("Especialidad");
@@ -57,9 +57,9 @@ public class Principal {
         double sueldoE;
         Enfermero[] enfermero;
         enfermero = new Enfermero[nE];
-        for(i = 0; i < nE; i++){
+        for (i = 0; i < nE; i++) {
             entrada.nextLine();
-            System.out.printf("Datos del %d enfermero\n", i+1);
+            System.out.printf("Datos del %d enfermero\n", i + 1);
             System.out.println("Nombre");
             nombreE = entrada.nextLine();
             System.out.println("Tipo");
@@ -69,8 +69,8 @@ public class Principal {
             Enfermero enfer = new Enfermero(nombreE, tipo, sueldoE);
             enfermero[i] = enfer;
         }
-        Hospital hospital = new Hospital(nombreH , ciudad, especialistas, medico, enfermero,
-        direccion);
+        Hospital hospital = new Hospital(nombreH, ciudad, especialistas, medico, enfermero,
+                direccion);
         hospital.calcularTotalSueldo();
         System.out.printf("%s", hospital);
     }

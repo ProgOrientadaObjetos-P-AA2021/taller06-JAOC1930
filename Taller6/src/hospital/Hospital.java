@@ -19,7 +19,7 @@ public class Hospital {
     private double totalSueldo;
     private String direccionH;
 
-   public Hospital(String nH, Ciudad cH, int nE, Medico[] cM, Enfermero[] cE,
+    public Hospital(String nH, Ciudad cH, int nE, Medico[] cM, Enfermero[] cE,
             String dH) {
         nombreH = nH;
         ciudadH = cH;
@@ -98,24 +98,24 @@ public class Hospital {
         String cadena = "";
         cadena = String.format("%sHospital: %s\nCiudad: %s\nProvincia: %s\n"
                 + "Direccion: %s\nNúmero de especialistas: %d\n"
-                + "Listado de médicos\n", cadena, nombreH, ciudadH.obtenerCiudad(), 
-                ciudadH.obtenerProvincia(), direccionH, 
+                + "Listado de médicos\n", cadena, nombreH, ciudadH.obtenerCiudad(),
+                ciudadH.obtenerProvincia(), direccionH,
                 numeroEspecialistas);
-        for(int i = 0; i < obtenerConjuntoMedicos().length; i++){
+        for (int i = 0; i < obtenerConjuntoMedicos().length; i++) {
             cadena = String.format("%s%s - Sueldo: %.2f - "
                     + "%s\n", cadena, conjuntoMedicos[i].obtenerNombre(),
                     conjuntoMedicos[i].obtenerSueldo(),
                     conjuntoMedicos[i].obtenerEspecialidad());
         }
         cadena = String.format("%sListado de enfermeros\n", cadena);
-        for(int i = 0; i < conjuntoEnfermeros.length; i++){
+        for (int i = 0; i < conjuntoEnfermeros.length; i++) {
             cadena = String.format("%s%s - Sueldo: %.2f - "
                     + "%s\n", cadena, conjuntoEnfermeros[i].obtenerNombre(),
-                    conjuntoEnfermeros[i].obtenerSueldoE(), 
+                    conjuntoEnfermeros[i].obtenerSueldoE(),
                     conjuntoEnfermeros[i].obtenerTipo());
         }
         cadena = String.format("%sSueldo: %.2f", cadena, obtenerTotalSueldo());
-        
+
         return cadena;
     }
 
